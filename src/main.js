@@ -366,6 +366,7 @@ async function main() {
     const jsons = await xmlsInCSV(pathDiretory, ".xml", 8);
     await json2CsvFile(jsons, pathDiretory + "/report")
     const notfis = await generateNOTFIS(jsons, "08298621000105", "22270464000312")
+    console.log(notfis)
     await save(notfis[0], notfis[1] + '.txt')
 }
 main()
